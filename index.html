@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Julio Suástegui — Security / OSINT Engineer</title>
+  <meta name="description" content="Julio Suástegui — Security / OSINT Engineer in Mexico City. 54 merged upstream PRs across 17 repos, including Microsoft PyRIT and Maigret.">
+  <meta name="theme-color" content="#101094">
+  <meta property="og:title" content="Julio Suástegui — Security / OSINT Engineer">
+  <meta property="og:description" content="Upstream open-source work in Microsoft PyRIT, Maigret and more.">
+  <meta property="og:type" content="website">
+  <!-- TODO: og:url / canonical once the domain is bought -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/pixelify-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/pixelify-sans-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+<a class="skip" href="#win-about">Skip to content</a>
+
+<!-- original pixel icon sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-card" viewBox="0 0 32 32">
+    <rect x="3" y="7" width="26" height="19" fill="#fff" stroke="#000" stroke-width="2"/>
+    <rect x="7" y="11" width="7" height="7" fill="#000"/>
+    <rect x="6" y="19" width="9" height="3" fill="#000"/>
+    <rect x="17" y="11" width="9" height="2" fill="#000"/>
+    <rect x="17" y="15" width="7" height="2" fill="#000"/>
+    <rect x="17" y="19" width="9" height="2" fill="#000"/>
+    <rect x="13" y="4" width="6" height="4" fill="#fff" stroke="#000" stroke-width="2"/>
+  </symbol>
+  <symbol id="i-merge" viewBox="0 0 32 32">
+    <path d="M6 3h14l7 7v19H6z" fill="#fff" stroke="#000" stroke-width="2"/>
+    <path d="M20 3v7h7" fill="none" stroke="#000" stroke-width="2"/>
+    <rect x="10" y="11" width="4" height="4" fill="#000"/>
+    <rect x="10" y="22" width="4" height="4" fill="#000"/>
+    <rect x="19" y="17" width="4" height="4" fill="#000"/>
+    <rect x="11" y="15" width="2" height="7" fill="#000"/>
+    <rect x="13" y="15" width="2" height="2" fill="#000"/>
+    <rect x="15" y="17" width="4" height="2" fill="#000"/>
+  </symbol>
+  <symbol id="i-folder" viewBox="0 0 32 32">
+    <path d="M3 8h10l3 3h13v17H3z" fill="#fff" stroke="#000" stroke-width="2"/>
+    <path d="M3 14h26" stroke="#000" stroke-width="2"/>
+  </symbol>
+  <symbol id="i-mail" viewBox="0 0 32 32">
+    <rect x="3" y="8" width="26" height="17" fill="#fff" stroke="#000" stroke-width="2"/>
+    <path d="M3 9l13 10L29 9" fill="none" stroke="#000" stroke-width="2"/>
+    <rect x="22" y="4" width="6" height="6" fill="#000"/>
+  </symbol>
+  <symbol id="i-trash" viewBox="0 0 32 32">
+    <rect x="5" y="7" width="22" height="4" fill="#fff" stroke="#000" stroke-width="2"/>
+    <rect x="12" y="3" width="8" height="4" fill="#fff" stroke="#000" stroke-width="2"/>
+    <path d="M7 11h18l-2 18H9z" fill="#fff" stroke="#000" stroke-width="2"/>
+    <rect x="12" y="14" width="2" height="12" fill="#000"/>
+    <rect x="18" y="14" width="2" height="12" fill="#000"/>
+  </symbol>
+</svg>
+
+<div class="screen">
+  <header class="menubar">
+    <svg class="logo" viewBox="0 0 9 9" aria-hidden="true" shape-rendering="crispEdges">
+      <defs>
+        <linearGradient id="rb" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stop-color="#3aa63a"/><stop offset=".18" stop-color="#3aa63a"/>
+          <stop offset=".18" stop-color="#f2c500"/><stop offset=".34" stop-color="#f2c500"/>
+          <stop offset=".34" stop-color="#f08a00"/><stop offset=".5" stop-color="#f08a00"/>
+          <stop offset=".5" stop-color="#e03a3a"/><stop offset=".67" stop-color="#e03a3a"/>
+          <stop offset=".67" stop-color="#8d3fa8"/><stop offset=".84" stop-color="#8d3fa8"/>
+          <stop offset=".84" stop-color="#2d6fd2"/><stop offset="1" stop-color="#2d6fd2"/>
+        </linearGradient>
+      </defs>
+      <path fill="url(#rb)" d="M3 0h6v2H7v5L6 8v1H2V8L1 7V5h2v2h2V2H3z"/>
+    </svg>
+    <span class="brand">Julio Suástegui</span>
+    <nav aria-label="Windows">
+      <a class="menu-item" href="#win-about" data-open="win-about">About</a>
+      <a class="menu-item" href="#win-work" data-open="win-work">Upstream work</a>
+      <a class="menu-item" href="#win-projects" data-open="win-projects">Projects</a>
+      <a class="menu-item" href="#win-contact" data-open="win-contact">Contact</a>
+    </nav>
+    <span class="clock" aria-hidden="true" id="clock"></span>
+  </header>
+
+  <main class="desktop" id="desktop">
+    <ul class="icons" aria-label="Desktop">
+      <li><a class="icon" href="#win-about" data-open="win-about"><svg aria-hidden="true"><use href="#i-card"/></svg><span>About</span></a></li>
+      <li><a class="icon" href="#win-work" data-open="win-work"><svg aria-hidden="true"><use href="#i-merge"/></svg><span>Upstream work</span></a></li>
+      <li><a class="icon" href="#win-projects" data-open="win-projects"><svg aria-hidden="true"><use href="#i-folder"/></svg><span>Projects</span></a></li>
+      <li><a class="icon" href="#win-contact" data-open="win-contact"><svg aria-hidden="true"><use href="#i-mail"/></svg><span>Contact</span></a></li>
+      <li class="trash-slot"><a class="icon" href="#win-trash" data-open="win-trash"><svg aria-hidden="true"><use href="#i-trash"/></svg><span>Trash</span></a></li>
+    </ul>
+
+    <!-- About -->
+    <section class="window" id="win-about" aria-labelledby="t-about" data-x="140" data-y="28" data-w="390">
+      <div class="titlebar">
+        <button class="box-btn close" type="button" aria-label="Close About"></button>
+        <h2 id="t-about">About</h2>
+        <button class="box-btn zoom" type="button" aria-label="Bring About to front"></button>
+      </div>
+      <div class="content">
+        <h1>Julio Suástegui</h1>
+        <p class="role">Security / OSINT Engineer<br>Mexico City</p>
+        <p><span class="tag hl">C|EH</span><span class="tag">Security</span><span class="tag">OSINT</span><span class="tag">Open source</span></p>
+        <p><span class="todo">TODO</span> Short bio in Julio's own words (2–3 lines).</p>
+      </div>
+      <div class="statusbar"><span>1 item</span><span>Mexico City</span></div>
+    </section>
+
+    <!-- Upstream work -->
+    <section class="window" id="win-work" aria-labelledby="t-work" data-x="560" data-y="28" data-w="450">
+      <div class="titlebar">
+        <button class="box-btn close" type="button" aria-label="Close Upstream work"></button>
+        <h2 id="t-work">Upstream work</h2>
+        <button class="box-btn zoom" type="button" aria-label="Bring Upstream work to front"></button>
+      </div>
+      <div class="ruler" aria-hidden="true"></div>
+      <div class="content">
+        <div class="stat">
+          <strong>54</strong>
+          <span>merged pull requests across <b>17</b> repos<br><small>as of Oct 17, 2026</small></span>
+        </div>
+        <h3>Microsoft PyRIT</h3>
+        <ul>
+          <li><a href="https://github.com/microsoft/PyRIT/pull/3251"><span class="mono">#3251</span></a> Media previews</li>
+          <li><a href="https://github.com/microsoft/PyRIT/pull/3163"><span class="mono">#3163</span></a> Dataset examples table + seed detail view</li>
+          <li><a href="https://github.com/microsoft/PyRIT/pull/3071"><span class="mono">#3071</span></a> Dataset catalog</li>
+        </ul>
+        <h3>Maigret</h3>
+        <ul>
+          <li><span class="mono">16</span> merged pull requests</li>
+        </ul>
+        <p><a class="btn plain" href="https://github.com/pulls?q=is%3Apr+author%3Ajuliosuas+is%3Amerged">All merged PRs</a></p>
+      </div>
+      <div class="statusbar"><span>54 merged</span><span>17 repos</span></div>
+    </section>
+
+    <!-- Projects -->
+    <section class="window" id="win-projects" aria-labelledby="t-projects" data-x="200" data-y="300" data-w="390">
+      <div class="titlebar">
+        <button class="box-btn close" type="button" aria-label="Close Projects"></button>
+        <h2 id="t-projects">Projects</h2>
+        <button class="box-btn zoom" type="button" aria-label="Bring Projects to front"></button>
+      </div>
+      <div class="content">
+        <ul>
+          <li><a href="https://github.com/juliosuas/clv-engine"><b>clv-engine</b></a><br>Paper-only tracker: prediction-market prices vs. sharp closing lines (CLV).</li>
+          <li><a href="https://github.com/juliosuas/funding-monitor"><b>funding-monitor</b></a><br>Paper-only crypto funding-rate / cash-and-carry monitor.</li>
+        </ul>
+        <p><a class="btn" href="https://github.com/juliosuas">github.com/juliosuas</a></p>
+      </div>
+      <div class="statusbar"><span>2 items</span><span>more on GitHub</span></div>
+    </section>
+
+    <!-- Contact -->
+    <section class="window" id="win-contact" aria-labelledby="t-contact" data-x="620" data-y="360" data-w="360" data-closed>
+      <div class="titlebar">
+        <button class="box-btn close" type="button" aria-label="Close Contact"></button>
+        <h2 id="t-contact">Contact</h2>
+        <button class="box-btn zoom" type="button" aria-label="Bring Contact to front"></button>
+      </div>
+      <div class="content">
+        <ul>
+          <li>GitHub: <a href="https://github.com/juliosuas">github.com/juliosuas</a></li>
+          <li>LinkedIn: <span class="todo">TODO</span> <!-- add linkedin.com/in/… URL --></li>
+          <li>Email: <a href="mailto:juliosuas@gmail.com">juliosuas@gmail.com</a> <span class="todo">TODO confirm</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Trash -->
+    <section class="window" id="win-trash" aria-labelledby="t-trash" data-x="700" data-y="420" data-w="280" data-closed data-closed-mobile>
+      <div class="titlebar">
+        <button class="box-btn close" type="button" aria-label="Close Trash"></button>
+        <h2 id="t-trash">Trash</h2>
+        <button class="box-btn zoom" type="button" aria-label="Bring Trash to front"></button>
+      </div>
+      <div class="content">
+        <p>The Trash is empty.</p>
+        <p><a href="404.html">Peek at the error screen →</a></p>
+      </div>
+      <div class="statusbar"><span>0 items</span><span>0K in Trash</span></div>
+    </section>
+  </main>
+</div>
+
+<script src="desktop.js" defer></script>
+</body>
+</html>

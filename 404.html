@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 — System error · Julio Suástegui</title>
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    .desktop { display: grid; place-items: center; min-height: calc(100vh - 6vh - 40px); }
+    .alert { width: min(460px, 100%); margin: 0; }
+    .alert .content { display: flex; gap: 16px; align-items: flex-start; padding: 18px; }
+    .alert svg.bomb { flex: none; width: 56px; height: 56px; shape-rendering: crispEdges; }
+    .alert h1 { font-size: 22px; margin: 0 0 6px; }
+    .alert .actions { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px; padding: 0 18px 14px; }
+    .alert { animation: shake .35s steps(6) 1; }
+    @keyframes shake { 0%,100% { transform: none } 33% { transform: translateX(-4px) } 66% { transform: translateX(4px) } }
+  </style>
+</head>
+<body>
+<div class="screen">
+  <header class="menubar">
+    <a class="brand" href="/" style="text-decoration:none">Julio Suástegui</a>
+    <span class="clock" aria-hidden="true">404</span>
+  </header>
+  <main class="desktop">
+    <section class="window is-active alert" role="alertdialog" aria-labelledby="err-title" aria-describedby="err-desc">
+      <div class="titlebar"><h2>System Error</h2></div>
+      <div class="content">
+        <svg class="bomb" viewBox="0 0 16 16" aria-hidden="true">
+          <rect x="0" y="0" width="16" height="16" fill="#fff"/>
+          <path fill="#000" d="M5 5h5v1h1v1h1v4h-1v1h-1v1H5v-1H4v-1H3V7h1V6h1z"/>
+          <rect x="5" y="7" width="2" height="2" fill="#fff"/>
+          <rect x="10" y="4" width="2" height="1" fill="#000"/>
+          <rect x="12" y="2" width="1" height="2" fill="#000"/>
+          <rect x="13" y="1" width="1" height="1" fill="#000"/>
+          <rect x="14" y="0" width="1" height="1" fill="#000"/>
+          <rect x="13" y="3" width="2" height="1" fill="#000"/>
+        </svg>
+        <div>
+          <h1 id="err-title">Sorry, a system error occurred.</h1>
+          <p id="err-desc">The page you asked for isn’t on this disk. <span class="mono" style="white-space:nowrap">ID = 404</span></p>
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn plain" type="button" onclick="history.back()">Go back</button>
+        <a class="btn" href="/">Restart</a>
+      </div>
+    </section>
+  </main>
+</div>
+</body>
+</html>
