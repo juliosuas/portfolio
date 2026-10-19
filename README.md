@@ -1,24 +1,35 @@
-# juliosuas — retro desktop portfolio (prototype)
+# juliosuas.pages.dev
 
-Static site, no build step: plain HTML + CSS + ~150 lines of vanilla JS.
-Deploy the folder as-is to GitHub Pages or Cloudflare Pages.
+Personal site of Julio Suástegui, Security / OSINT engineer in Mexico City.
+It looks like a 1980s desktop: a menu bar, icons, and windows you can drag around.
 
-- `index.html` – desktop: menu bar, icons, draggable windows (About, Upstream work, Projects, Contact, Trash)
-- `404.html` – "System Error" bomb dialog (uses root-absolute paths `/style.css`, assumes the site lives at the domain root)
-- `style.css` – design tokens + theme (original CSS)
-- `desktop.js` – window manager (Pointer Events → mouse + touch; Esc closes; Alt+Arrows moves a focused window title)
-- `fonts/` – self-hosted OFL fonts + their licenses
+Live: https://juliosuas.pages.dev
 
-Behaviour: ≥769px wide → floating windows you can drag; ≤768px → windows stack vertically and scroll normally.
-Without JS everything is visible and stacked. Honors `prefers-reduced-motion` and `forced-colors`.
+## What's here
 
-## TODO before launch
-- Bio text in About
-- LinkedIn URL in Contact
-- Confirm email address
-- `og:url` / canonical + `CNAME` once the domain is bought
+Static HTML, CSS and about 120 lines of vanilla JS. There's no build step.
 
-## Credits / licenses
-- Pixelify Sans — © The Pixelify Sans Project Authors, SIL OFL 1.1 (`fonts/OFL-PixelifySans.txt`)
-- VT323 — © The VT323 Project Authors, SIL OFL 1.1 (`fonts/OFL-VT323.txt`)
-- All icons, logo, patterns and CSS are original; the look is inspired by 1980s 1-bit desktop GUIs.
+- `index.html`: the desktop (About, Upstream work, Projects, Contact, Trash)
+- `404.html`: a "System Error" dialog
+- `style.css`: theme and layout
+- `desktop.js`: draggable windows using Pointer Events, so mouse and touch both work. Esc closes a window.
+- `fonts/`: self-hosted OFL fonts and their licenses
+
+Wider than 768px, the windows float and you can drag them. At 768px or narrower they stack and scroll.
+With JS off, every window shows, stacked. The site respects `prefers-reduced-motion` and `forced-colors`.
+
+## Run locally
+
+```sh
+python3 -m http.server 8765
+```
+
+## Deploy
+
+Hosted on Cloudflare Pages: `wrangler pages deploy . --project-name juliosuas`
+
+## Credits
+
+- Pixelify Sans: © The Pixelify Sans Project Authors, SIL OFL 1.1 (`fonts/OFL-PixelifySans.txt`)
+- VT323: © The VT323 Project Authors, SIL OFL 1.1 (`fonts/OFL-VT323.txt`)
+- The icons, logo, patterns and CSS are original work. The look is inspired by 1-bit desktop GUIs from the 1980s.

@@ -216,7 +216,6 @@ a:hover { background: var(--ink); color: var(--paper); text-decoration: none; }
   border: var(--line) solid var(--ink); background: var(--paper);
 }
 .tag.hl { background: var(--highlight); }
-.todo { background: var(--highlight); padding: 0 4px; border: 1px dashed var(--ink); font-family: var(--font-mono); font-size: 1.15em; }
 
 .stat {
   display: flex; gap: 12px; align-items: baseline; flex-wrap: wrap;
