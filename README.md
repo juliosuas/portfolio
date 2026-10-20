@@ -12,6 +12,7 @@ Static HTML, CSS and about 120 lines of vanilla JS. There's no build step.
 - `index.html`: the desktop (About, Upstream work, Projects, Contact, Trash)
 - `404.html`: a "System Error" dialog
 - `style.css`: theme and layout
+- `terminal.js`: opens with About/Contact and plays a simulated, offline Maigret run. Entries come only from `data/maigret-hits.js`
 - `desktop.js`: draggable windows using Pointer Events, so mouse and touch both work. Esc closes a window.
 - `fonts/`: self-hosted OFL fonts and their licenses
 

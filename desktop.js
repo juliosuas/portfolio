@@ -29,6 +29,17 @@
     win.style.top = y + 'px';
   }
 
+  // show a window without moving focus (used by terminal.js)
+  function show(win) {
+    win.hidden = false;
+    place(win);
+    if (isWide() && !reduce.matches) {
+      win.classList.remove('opening'); void win.offsetWidth; win.classList.add('opening');
+    }
+    win.style.zIndex = isWide() ? ++z : '';
+  }
+  window.Desk = { show };
+
   function open(id, opener) {
     const win = document.getElementById(id);
     if (!win) return;
@@ -43,6 +54,7 @@
     h.tabIndex = -1;
     h.focus({ preventScroll: isWide() });
     if (!isWide()) win.scrollIntoView({ block: 'start', behavior: reduce.matches ? 'auto' : 'smooth' });
+    document.dispatchEvent(new CustomEvent('desk:open', { detail: { id } }));
   }
 
   function close(win) {
@@ -51,6 +63,7 @@
     document.querySelectorAll(`.icon[data-open="${win.id}"]`).forEach(i => i.classList.remove('is-selected'));
     const back = lastOpener || document.querySelector(`.icon[data-open="${win.id}"]`);
     if (back) back.focus();
+    document.dispatchEvent(new CustomEvent('desk:close', { detail: { id: win.id } }));
   }
 
   // initial state

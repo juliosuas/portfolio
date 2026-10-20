@@ -297,3 +297,22 @@ a:hover { background: var(--ink); color: var(--paper); text-decoration: none; }
   .menubar nav, .icons, .box-btn, .clock { display: none; }
   .window { box-shadow: none; position: static !important; display: block !important; break-inside: avoid; }
 }
+
+/* ---------- terminal (simulated Maigret run) ---------- */
+.term .term-out {
+  background: var(--ink); color: var(--paper);
+  font-family: var(--font-mono); font-size: 20px; line-height: 1.15;
+  min-height: 220px; max-height: 340px;
+  white-space: pre-wrap; overflow-wrap: anywhere;
+}
+.term .term-out a { color: var(--highlight); }
+.term .term-out a:hover { background: var(--highlight); color: var(--ink); }
+.term .dim { opacity: .7; }
+.term .ok { color: #7bff7b; }
+.term .sum { color: var(--highlight); }
+.term .cursor::after { content: "█"; animation: blink 1s steps(1) infinite; }
+.term .statusbar { align-items: center; }
+.term-skip { margin: 0; padding: 2px 10px; font-size: 12px; box-shadow: none; }
+.term-skip[hidden] { display: none; }
+@keyframes blink { 50% { opacity: 0; } }
+@media (max-width: 768px) { .term .term-out { font-size: 18px; min-height: 180px; } }

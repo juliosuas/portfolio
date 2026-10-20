@@ -169,6 +169,17 @@
       </div>
     </section>
 
+    <!-- Terminal: simulated Maigret run, entries from data/maigret-hits.js -->
+    <section class="window term" id="win-term" aria-labelledby="t-term" data-x="560" data-y="250" data-w="470" data-closed data-closed-mobile hidden>
+      <div class="titlebar">
+        <button class="box-btn close" type="button" aria-label="Close Terminal"></button>
+        <h2 id="t-term">Terminal</h2>
+        <button class="box-btn zoom" type="button" aria-label="Bring Terminal to front"></button>
+      </div>
+      <div class="content term-out" id="term-out" role="log" aria-label="Simulated Maigret output" tabindex="0"></div>
+      <div class="statusbar"><span>maigret (simulated)</span><button class="btn plain term-skip" id="term-skip" type="button">Skip</button></div>
+    </section>
+
     <!-- Trash -->
     <section class="window" id="win-trash" aria-labelledby="t-trash" data-x="700" data-y="420" data-w="280" data-closed data-closed-mobile>
       <div class="titlebar">
@@ -186,5 +197,7 @@
 </div>
 
 <script src="desktop.js" defer></script>
+<script src="data/maigret-hits.js" defer></script>
+<script src="terminal.js" defer></script>
 </body>
 </html>
